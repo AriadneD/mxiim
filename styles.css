@@ -1,0 +1,342 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Instrument Sans";
+}
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.nav {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    font-size: 20px;
+    background: transparent;
+    transition: background 0.3s ease-in-out;
+}
+.nav.scrolled {
+    background: #ff9494;
+}
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px 15px 10px;
+}
+.nav img {
+    margin-bottom: 5px;
+    height: 30px;
+}
+h1 {
+    
+    font-size: 60px;
+    color: #EC336A;
+    font-family: "Goblin One";
+}
+h2 {
+    font-family: "Hepta Slab";
+    font-size: 30px;
+}
+h3 {
+    font-family: "Hepta Slab";
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-family: "Instrument Sans";
+    font-size: 20px;
+}
+.hero {
+    /*background:  url('/images/starrysky.png'), url('/images/herobg.png');*/
+    background: url('/images/herobg.png');
+    background-size: 110%;
+    background-position: center;
+    transition: background-position 0.1s ease;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.hero-container { /*inside my hero*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 50px;
+
+}
+.flex-left {
+    padding: 40px 40px;
+    width: 40%;
+}
+.flex-right {
+    display: flex;
+    width: 60%;
+    height: auto;
+}
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    overflow-x: hidden;
+    background: url('/images/watermark.png');
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+a button {
+    color: white;
+    background: #FFAE00;
+    padding: 15px 30px;
+    font-family: "Hepta Slab";
+    border-radius: 50px;
+    border: 0px solid transparent !important;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0px;
+    transition: ease all .6s;
+}
+a button:hover {
+    transform: scale(1.1);
+    transition: ease all .6s;
+    cursor: pointer;
+    background: #d39000;
+}
+.section {
+    margin: 0;
+    padding: 80px 0px;
+    text-align: center;
+
+}
+.inner {
+    padding: 0px 20%;
+}
+/* Cursor dot styles */
+#cursor-dot {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('/images/cursordot.png');
+    background-size: cover;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: pulse 2s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+/* Marquee container */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+/* Each text or card */
+.loop-text {
+    white-space: nowrap;
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+/* Marquee content (scrolling items) */
+.marquee-content {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 20s linear infinite;
+}
+
+.reverse-marquee {
+    display: flex;
+    gap: 20px;
+    animation: scroll-right 20s linear infinite;
+}
+
+.data-card {
+    background: rgb(255, 233, 192);
+    padding: 30px 30px;
+    border-radius: 10px;
+}
+
+.serum {
+    width: 100%;
+}
+.newbanner {
+    position: absolute; 
+    top: 5px; 
+    right: 0; 
+    background: white; 
+    border-radius: 50px 0px 0px 50px; 
+    padding: 5px 30px 5px 30px;
+}
+.signupform label {
+    display: none !important;
+}
+/* Input bar styles */
+.signupform input {
+    flex: 1;
+    border-radius: 50px;
+    padding: 15px 30px;
+    background: white;
+    border: 2px solid #ddd;
+    color: #333;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus effect for the input bar */
+.signupform input:focus {
+    border-color: #FFAE00;
+    box-shadow: 0 0 8px rgba(255, 174, 0, 0.5);
+}
+
+/* Button styles */
+.signupform button {
+    color: white;
+    background: #FFAE00;
+    padding: 15px 30px;
+    font-family: "Hepta Slab", serif;
+    border-radius: 50px;
+    border: 0px solid transparent;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px 0;
+    transition: all 0.6s ease;
+}
+
+/* Hover effect for the button */
+.signupform button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background: #d39000;
+}
+
+/* Button active (pressed) effect */
+.signupform button:active {
+    transform: scale(1.05);
+    background: #b97300;
+}
+
+/* Footer Styles */
+.footer {
+    background: url('/images/herobg.png');
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    font-family: "Hepta Slab", serif;
+    font-size: 10px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #e4e4e4;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #d39000;
+}
+
+
+/* Animation keyframes with starting position */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(-25%);  /* Start already partway through */
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Animation keyframes with starting position */
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);  /* Start already partway through */
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+/* Pulsing animation */
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1068px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .flex-left {
+        width: 100%;
+    }
+    .flex-right {
+        width: 100%;
+    }
+    .inner {
+        padding: 40px 5%;
+    }
+    .flex-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-container {
+        max-width: 600px;
+    }
+    .hero {
+        background-size: cover;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+    .flex-container div {
+        width: 100% !important;
+    }
+    .serum {
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+    }
+    .newbanner {
+        position: relative;
+        top: -10px;
+        border-radius: 0;
+    }
+}
