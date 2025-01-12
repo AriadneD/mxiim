@@ -176,6 +176,17 @@ p {
   overflow-x: hidden;
   background: url("/images/watermark.png");
 }
+.mobile-img {
+  display: none;
+  width: 100%;
+  background: url("/images/watermark.png");
+  margin:0;
+  padding: 0;
+  background-size: contain;
+}
+.mobile-img img {
+    width: 100%;
+}
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -566,7 +577,11 @@ a button:hover {
     align-items: center;
   }
   .img-container {
-    max-width: 600px;
+    /*max-width: 600px;*/
+    display: none;
+  }
+  .mobile-img {
+    display: block;
   }
   .hero {
     background-size: cover;
