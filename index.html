@@ -22,12 +22,8 @@
     />
   </head>
   <body>
-    <div class="nav">
-      <div class="nav-container">
-        <img src="images/logo.png" />
-        <i class="fa fa-bars"></i>
-      </div>
-    </div>
+    <div id="navigation-placeholder"></div>
+
     <div class="hero">
       <div class="hero-container">
         <div
@@ -42,7 +38,7 @@
             BS.<br />
             Just clean, science-backed skincare that actually works. 💖
           </p>
-          <a href="/shop.html"><button>Shop Now</button></a>
+          <a href="/shop/all.html"><button>Shop Now</button></a>
         </div>
         <div class="flex-right">
           <div class="img-container">
@@ -181,7 +177,9 @@
       "
     >
       <div class="inner">
-        <h2 data-aos="fade-up" data-aos-duration="500">Ready, set, glow with our Skin Bestsellers. 🌿</h2>
+        <h2 data-aos="fade-up" data-aos-duration="500">
+          Ready, set, glow with our Skin Bestsellers. 🌿
+        </h2>
       </div>
       <br />
       <div id="collection-component-1736567710683"></div>
@@ -306,8 +304,13 @@
         );
       "
     >
-      <div style="width: 50%; padding: 0 !important; margin: 0 !important;">
-        <img data-aos="fade-right" data-aos-duration="500" class="serum" src="/images/serumgirl.png" />
+      <div style="width: 50%; padding: 0 !important; margin: 0 !important">
+        <img
+          data-aos="fade-right"
+          data-aos-duration="500"
+          class="serum"
+          src="/images/serumgirl.png"
+        />
       </div>
       <div
         style="
@@ -321,13 +324,197 @@
           <h3>New! Caffeine Booster Gel</h3>
         </div>
         <div data-aos="fade-left" data-aos-duration="500">
-          <h2>Morning glow in a bottle.</h2>
-          <p>
-            Meet your new morning bestie. Our gel concentrate with 1% caffeine
-            refreshes, hydrates, and revives dull, tired skin. Just a few drops
-            mixed with your moisturizer, and you’re ready to glow.
-          </p>
-          <a href="/shop.html"><button>Shop Now</button></a>
+          <div class="txt">
+            <h2>Morning glow in a bottle.</h2>
+            <p>
+              Meet your new morning bestie. Our gel concentrate with 1% caffeine
+              refreshes, hydrates, and revives dull, tired skin. Just a few
+              drops mixed with your moisturizer, and you’re ready to glow.
+            </p>
+            <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+              <div id="product-component-1736716677691"></div>
+              <script type="text/javascript">
+                /*<![CDATA[*/
+                (function () {
+                  var scriptURL =
+                    "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
+                  if (window.ShopifyBuy) {
+                    if (window.ShopifyBuy.UI) {
+                      ShopifyBuyInit();
+                    } else {
+                      loadScript();
+                    }
+                  } else {
+                    loadScript();
+                  }
+                  function loadScript() {
+                    var script = document.createElement("script");
+                    script.async = true;
+                    script.src = scriptURL;
+                    (
+                      document.getElementsByTagName("head")[0] ||
+                      document.getElementsByTagName("body")[0]
+                    ).appendChild(script);
+                    script.onload = ShopifyBuyInit;
+                  }
+                  function ShopifyBuyInit() {
+                    var client = ShopifyBuy.buildClient({
+                      domain: "fa96d6-fb.myshopify.com",
+                      storefrontAccessToken: "edddb495782607d40890b645520e4a13",
+                    });
+                    ShopifyBuy.UI.onReady(client).then(function (ui) {
+                      ui.createComponent("product", {
+                        id: "8157609066692",
+                        node: document.getElementById(
+                          "product-component-1736716677691"
+                        ),
+                        moneyFormat: "%24%7B%7Bamount%7D%7D",
+                        options: {
+                          product: {
+                            styles: {
+                              product: {
+                                "@media (min-width: 601px)": {
+                                  "max-width": "calc(25% - 20px)",
+                                  "margin-left": "20px",
+                                  "margin-bottom": "50px",
+                                },
+                              },
+                              button: {
+                                "font-family": "Arvo, serif",
+                                "font-weight": "bold",
+                                "font-size": "18px",
+                                "padding-top": "17px",
+                                "padding-bottom": "17px",
+                                ":hover": {
+                                  "background-color": "#e69d00",
+                                },
+                                "background-color": "#ffae00",
+                                ":focus": {
+                                  "background-color": "#e69d00",
+                                },
+                                "border-radius": "40px",
+                              },
+                              quantityInput: {
+                                "font-size": "18px",
+                                "padding-top": "17px",
+                                "padding-bottom": "17px",
+                              },
+                            },
+                            buttonDestination: "modal",
+                            contents: {
+                              img: false,
+                              title: false,
+                              price: false,
+                              options: false,
+                            },
+                            text: {
+                              button: "View product",
+                            },
+                            googleFonts: ["Arvo"],
+                          },
+                          productSet: {
+                            styles: {
+                              products: {
+                                "@media (min-width: 601px)": {
+                                  "margin-left": "-20px",
+                                },
+                              },
+                            },
+                          },
+                          modalProduct: {
+                            contents: {
+                              img: false,
+                              imgWithCarousel: true,
+                              button: false,
+                              buttonWithQuantity: true,
+                            },
+                            styles: {
+                              product: {
+                                "@media (min-width: 601px)": {
+                                  "max-width": "100%",
+                                  "margin-left": "0px",
+                                  "margin-bottom": "0px",
+                                },
+                              },
+                              button: {
+                                "font-family": "Arvo, serif",
+                                "font-weight": "bold",
+                                "font-size": "18px",
+                                "padding-top": "17px",
+                                "padding-bottom": "17px",
+                                ":hover": {
+                                  "background-color": "#e69d00",
+                                },
+                                "background-color": "#ffae00",
+                                ":focus": {
+                                  "background-color": "#e69d00",
+                                },
+                                "border-radius": "40px",
+                              },
+                              quantityInput: {
+                                "font-size": "18px",
+                                "padding-top": "17px",
+                                "padding-bottom": "17px",
+                              },
+                            },
+                            googleFonts: ["Arvo"],
+                            text: {
+                              button: "Add to cart",
+                            },
+                          },
+                          option: {},
+                          cart: {
+                            styles: {
+                              button: {
+                                "font-family": "Arvo, serif",
+                                "font-weight": "bold",
+                                "font-size": "18px",
+                                "padding-top": "17px",
+                                "padding-bottom": "17px",
+                                ":hover": {
+                                  "background-color": "#e69d00",
+                                },
+                                "background-color": "#ffae00",
+                                ":focus": {
+                                  "background-color": "#e69d00",
+                                },
+                                "border-radius": "40px",
+                              },
+                            },
+                            text: {
+                              total: "Subtotal",
+                              button: "Checkout",
+                            },
+                            googleFonts: ["Arvo"],
+                          },
+                          toggle: {
+                            styles: {
+                              toggle: {
+                                "font-family": "Arvo, serif",
+                                "font-weight": "bold",
+                                "background-color": "#ffae00",
+                                ":hover": {
+                                  "background-color": "#e69d00",
+                                },
+                                ":focus": {
+                                  "background-color": "#e69d00",
+                                },
+                              },
+                              count: {
+                                "font-size": "18px",
+                              },
+                            },
+                            googleFonts: ["Arvo"],
+                          },
+                        },
+                      });
+                    });
+                  }
+                })();
+                /*]]>*/
+              </script>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -344,7 +531,11 @@
     >
       <div class="inner">
         <h2 data-aos="fade-up" data-aos-duration="500">Start Fresh. 🫧</h2>
-        <p data-aos="fade-up" data-aos-duration="500">Your glow-up begins with a clean slate. Our cleansers are here to wash away the day (and the dirt), leaving your skin fresh, soft, and never stripped.</p>
+        <p data-aos="fade-up" data-aos-duration="500">
+          Your glow-up begins with a clean slate. Our cleansers are here to wash
+          away the day (and the dirt), leaving your skin fresh, soft, and never
+          stripped.
+        </p>
       </div>
       <br />
       <div id="collection-component-1736565146840"></div>
@@ -457,24 +648,60 @@
         /*]]>*/
       </script>
     </div>
-    <div class="flex-container" style="padding: 40px 0px; background: url('/images/herobg.png')">
-      <div style="text-align: left; padding: 20px;">
-        <h2 data-aos="fade-right" data-aos-duration="500">
-          Stay in the Glow. ✨
-        </h2>
-        <p data-aos="fade-right" data-aos-duration="500">
-          Get 10% off your next order when you join our email list for exclusive deals and skincare tips.
-        </p>
-        <div class="signupform" data-aos="fade-right" data-aos-duration="500">
-          <script src="https://www.cognitoforms.com/f/seamless.js" data-key="Tkqa8zk7zU2kY3Y-M-cC6Q" data-form="19"></script>
+    <div
+      id="signup"
+      class="flex-container"
+      style="
+        justify-content: space-around;
+        padding: 20px 0px;
+        background-size: 100% 100%;
+        background-position: 0px 0px;
+        background-image: radial-gradient(
+          75% 150% at 100% 52%,
+          #e68da6ff 13%,
+          #ebf1b4 98%
+        );
+      "
+    >
+      <div style="text-align: center; padding: 50px 20px">
+        <div class="signup-container">
+          <div class="txt">
+            <h2 data-aos="fade-right" data-aos-duration="500">
+              Stay in the Glow. ✨
+            </h2>
+            <p data-aos="fade-right" data-aos-duration="500">
+              Get 10% off your next order when you join our email list for
+              exclusive deals and skincare tips.
+            </p>
+          </div>
+          <div class="signupform" data-aos="fade-right" data-aos-duration="500">
+            <script
+              src="https://www.cognitoforms.com/f/seamless.js"
+              data-key="Tkqa8zk7zU2kY3Y-M-cC6Q"
+              data-form="19"
+            ></script>
+            <div
+              style="
+                position: absolute;
+                bottom: 10px;
+                left: 20%;
+                right: 20%;
+                background: #fff;
+                height: 80px;
+              "
+            ></div>
+          </div>
         </div>
       </div>
-      <img data-aos="fade-left" data-aos-duration="500" src="/images/join.jpg" style="margin: 0px 20px;width: 400px; border-radius: 20px; object-fit: cover; height: 500px; "/>
+      <img
+        data-aos="fade-left"
+        data-aos-duration="500"
+        src="/images/subscribe.png"
+        class="signup-img"
+      />
     </div>
-    <footer class="footer">
-      <p>&copy; 2025 Mxiim. All rights reserved.</p>
-  </footer>
-  
+    <div id="footer-placeholder"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init();
