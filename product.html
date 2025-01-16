@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mxiim</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goblin+One&family=Hepta+Slab:wght@1..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <style>
+      .product-cards {
+        display: flex;
+        padding: 20px 0px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .product-card {
+        width: 33%;
+        text-align: center;
+        padding: 20px;
+      }
+      .product-card h3 {
+        font-family: "Instrument Sans";
+      }
+
+      .product-card img {
+        width: 200px;
+        margin-bottom: 20px;
+        height: auto;
+      }
+
+      .popup {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        overflow-y: scroll;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .popup.hidden {
+        display: none;
+      }
+
+      .popup-content {
+        position: fixed;
+        background: #fff;
+        border-radius: 10px;
+        width: 80%;
+        text-align: left;
+        position: relative;
+      }
+      .popup-cont {
+        padding: 20px;
+        gap: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .popup-content h2 {
+        margin: 10px 0;
+        font-family: "Instrument Sans";
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      .gallery {
+        text-align: center;
+        max-width: 600px;
+      }
+
+      .main-image {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .main-image img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: black;
+        background: transparent;
+        text-shadow: 0px 0px 5px white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .left-arrow {
+        left: 10px;
+      }
+
+      .right-arrow {
+        right: 10px;
+      }
+
+      .thumbnails {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .thumbnail {
+        width: 50px !important;
+        object-fit: cover;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: border 0.3s ease;
+      }
+
+      .thumbnail:hover,
+      .thumbnail.active {
+        border: 2px solid #fcb900;
+      }
+      @media (max-width: 1068px) {
+        .popup-cont {
+            flex-direction: column;
+        }
+        .flex-left {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="product-cards">
+      <div class="product-card">
+        <img src="/images/product.webp" alt="Gentle Cleansing Milk" />
+        <h3>Gentle Cleansing Milk</h3>
+        <p>$18.99</p>
+        <a><button id="viewProduct">View product</button></a>
+      </div>
+    </div>
+
+    <div id="productPopup" class="popup hidden">
+      <div class="popup-content">
+        <button id="closePopup" class="close-btn">&times;</button>
+
+        <div class="popup-cont">
+          <div class="flex-left">
+            <div class="gallery">
+              <div class="main-image">
+                <button class="arrow left-arrow" id="prev">◀</button>
+                <img
+                  id="currentImage"
+                  src="/images/product.webp"
+                  alt="Gentle Cleansing Milk"
+                />
+                <button class="arrow right-arrow" id="next">▶</button>
+              </div>
+              <div class="thumbnails">
+                <img class="thumbnail" src="/images/product.webp" alt="Image 1" />
+                <img class="thumbnail" src="/images/product2.webp" alt="Image 2" />
+                <img class="thumbnail" src="/images/product3.webp" alt="Image 3" />
+                <img class="thumbnail" src="/images/product4.webp" alt="Image 4" />
+                <img class="thumbnail" src="/images/product5.webp" alt="Image 5" />
+              </div>
+            </div>
+          </div>
+          <div class="flex-left">
+            <h2>Gentle Cleansing Milk</h2>
+            <p><strong>$18.99</strong></p>
+            <a><button>Add to cart</button></a>
+            <p>
+              Transform your skincare routine with our Gentle Cleansing Milk, a
+              silky-soft cleanser that nourishes your skin while effortlessly
+              removing makeup and impurities.
+            </p>
+
+            <div
+              class="inner"
+              style="width: 100% !important; margin: 0; padding: 0"
+            >
+              <div class="faq-section">
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>Details</span>
+                    <i class="faq-icon">+</i>
+                  </div>
+                  <div class="faq-answer">
+                    Pamper your skin with a cleanser designed for dry, normal,
+                    and mature skin types. The combination of Shea Butter, Argan
+                    Oil, Avocado Oil, and Jojoba Oil provides deep hydration,
+                    leaving your skin soft and refreshed. Natural ingredients
+                    support anti-aging and dehydrated skin concerns, ensuring
+                    healthier-looking, radiant skin.
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>How to Use</span>
+                    <i class="faq-icon">+</i>
+                  </div>
+                  <div class="faq-answer">
+                    Apply the cleansing milk to your face and massage gently in
+                    circular motions. Rinse off with water. Enjoy instantly
+                    clean, refreshed skin without dryness or irritation.
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>Ingredients</span>
+                    <i class="faq-icon">+</i>
+                  </div>
+                  <div class="faq-answer">
+                    Shea Butter, Argan Oil, Avocado Oil, Jojoba Oil, Flower
+                    extracts for hydration and anti-aging benefits.
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>Returns Policy</span>
+                    <i class="faq-icon">+</i>
+                  </div>
+                  <div class="faq-answer">
+                    If you’re not completely satisfied, returns are accepted
+                    within 30 days of purchase. Conditions apply.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("viewProduct")
+        .addEventListener("click", function () {
+          document.getElementById("productPopup").classList.remove("hidden");
+        });
+
+      document
+        .getElementById("closePopup")
+        .addEventListener("click", function () {
+          document.getElementById("productPopup").classList.add("hidden");
+        });
+
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+        const icon = item.querySelector(".faq-icon");
+
+        question.addEventListener("click", () => {
+          // Toggle the 'open' class on the answer
+          answer.classList.toggle("open");
+
+          // Toggle between + and -
+          if (icon.textContent === "+") {
+            icon.textContent = "-";
+          } else {
+            icon.textContent = "+";
+          }
+        });
+      });
+
+      const thumbnails = document.querySelectorAll(".thumbnail");
+      const currentImage = document.getElementById("currentImage");
+      const prevButton = document.getElementById("prev");
+      const nextButton = document.getElementById("next");
+
+      let currentIndex = 0;
+
+      const images = [
+        "/images/product.webp",
+        "/images/product2.webp",
+        "/images/product3.webp",
+        "/images/product4.webp",
+        "/images/product5.webp",
+      ];
+
+      // Update the main image
+      function updateMainImage(index) {
+        currentImage.src = images[index];
+        thumbnails.forEach((thumbnail, idx) => {
+          thumbnail.classList.toggle("active", idx === index);
+        });
+      }
+
+      // Navigate to the previous image
+      prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateMainImage(currentIndex);
+      });
+
+      // Navigate to the next image
+      nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateMainImage(currentIndex);
+      });
+
+      // Handle thumbnail clicks
+      thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener("click", () => {
+          currentIndex = index;
+          updateMainImage(currentIndex);
+        });
+      });
+
+      // Initialize the gallery
+      updateMainImage(currentIndex);
+    </script>
+  </body>
+</html>
