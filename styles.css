@@ -664,9 +664,10 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  overflow-y: scroll;
+  height: 90vh;
+  overflow-y: hidden;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .popup.hidden {
@@ -675,11 +676,13 @@ p {
 
 .popup-content {
   position: fixed;
-  background: #fff;
+  background: white;
   border-radius: 10px;
   width: 80%;
   text-align: left;
   position: relative;
+  overflow-y: scroll;
+  height: 100%;
 }
 .popup-cont {
   padding: 20px;
