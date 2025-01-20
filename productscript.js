@@ -10,7 +10,7 @@ const products = [
       "/images/p/product3.webp",
     ],
     description:
-      "Transform your skincare routine with our Gentle Cleansing Milk, a silky-soft cleanser that nourishes your skin while effortlessly removing makeup and impurities.",
+      "Transform your skincare routine with our Gentle Cleansing Milk, a silky-soft cleanser that nourishes your skin while effortlessly removing makeup & impurities.",
     details:
       "Pamper your skin with a cleanser designed for dry, normal, and mature skin types. The combination of Shea Butter, Argan Oil, Avocado Oil, and Jojoba Oil provides deep hydration, leaving your skin soft and refreshed. Natural ingredients support anti-aging and dehydrated skin concerns, ensuring healthier-looking, radiant skin.",
     howToUse:
