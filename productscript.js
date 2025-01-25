@@ -16,7 +16,7 @@ const products = [
     howToUse:
       "Apply the cleansing milk to your face and massage gently in circular motions. Rinse off with water. Enjoy instantly clean, refreshed skin without dryness or irritation.",
     ingredients:
-      "Shea Butter, Argan Oil, Avocado Oil, Jojoba Oil, Flower Extracts for hydration and anti-aging benefits.",
+      "Shea Butter, Argan Oil, Avocado Oil, Jojoba Oil, Flower extracts for hydration and anti-aging benefits.",
     returnPolicy:
       "If you’re not completely satisfied, returns are accepted within 30 days of purchase. Conditions apply.",
     shopifyConfig: {
